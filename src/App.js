@@ -1,21 +1,16 @@
-class Human {
-  constructor() {
-    this.age = 30;
-  }
-  printAge() {
+class human {
+  age = 50;
+  printAge = () => {
     console.log(this.age);
-  }
+  };
 }
-
-class Person extends Human {
-  constructor() {
-    super();
-    this.name = "sruthi";
-  }
-  printName() {
+class person extends human {
+  name = "sruthi";
+  age = 90;
+  printName = () => {
     console.log(this.name);
-  }
+  };
 }
-const person = new Person();
-person.printAge();
-person.printName();
+const p = new person();
+p.printAge();
+p.printName();
