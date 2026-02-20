@@ -1,12 +1,21 @@
-class Person {
+class Human {
   constructor() {
-    this.name = "abc";
-  }
-  printName() {
     this.age = 30;
-    console.log(this.name);
+  }
+  printAge() {
     console.log(this.age);
   }
 }
-const p1 = new Person();
-p1.printName();
+
+class Person extends Human {
+  constructor() {
+    super();
+    this.name = "sruthi";
+  }
+  printName() {
+    console.log(this.name);
+  }
+}
+const person = new Person();
+person.printAge();
+person.printName();
