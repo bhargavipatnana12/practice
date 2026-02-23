@@ -1,16 +1,13 @@
-class human {
-  age = 50;
-  printAge = () => {
-    console.log(this.age);
-  };
-}
-class person extends human {
-  name = "sruthi";
-  age = 90;
-  printName = () => {
-    console.log(this.name);
-  };
-}
-const p = new person();
-p.printAge();
-p.printName();
+import React, { useState } from "react";
+
+const App = () => {
+  const [name, setName] = useState("sruthi");
+  return (
+    <div>
+      <h1>welcome {name}</h1>
+      <button onClick={() => setName("patnana")}>change</button>
+    </div>
+  );
+};
+
+export default App;
