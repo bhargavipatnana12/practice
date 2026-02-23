@@ -1,13 +1,14 @@
-import React, { Component } from "react";
-import Display from "./Display";
+import React, { useEffect, useState } from "react";
 
-export default class App extends Component {
-  state = { name: "sri" };
-  render() {
-    return (
-      <div>
-        <Display name={this.state.name} />
-      </div>
-    );
-  }
-}
+const App = () => {
+  const [count, setCount] = useState(0);
+  useEffect(() => console.log("clicked"), []);
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+};
+
+export default App;
