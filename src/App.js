@@ -1,19 +1,13 @@
 import React from "react";
 
 const App = () => {
-  const arr = ["react", "js", "viewjs"];
+  const names = ["srinu", "somu", "romu"];
+  const filtered = names.filter((name) => name.includes("s"));
 
-  const array = [{ id: 1 }, { name: "sruthi" }, { place: "vsd" }];
   return (
     <div>
-      {arr.map((value, index) => (
-        <li>{value}</li>
-      ))}
-      {array.map((value) => (
-        <li key={value.id}>
-          {value.name}
-          {value.place}
-        </li>
+      {filtered.map((item) => (
+        <li>{item}</li>
       ))}
     </div>
   );
