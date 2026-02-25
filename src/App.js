@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const App = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((json) => setData(json));
+    axios
+      .get("https://jsonplaceholder.typicode.com/users")
+      .then((response) => setData(response.data));
   }, []);
   return (
     <div>
       {data.map((item) => (
-        <li key={item.id}>{item.username}</li>
+        <li>{item.username}</li>
       ))}
     </div>
   );
