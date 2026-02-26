@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import Display from "./Display";
+import React from "react";
+import Controlled from "./Controlled";
+
 const App = () => {
   return (
     <div>
-      <Display count={60} name="sruthi" />
+      <Controlled />
     </div>
   );
 };
