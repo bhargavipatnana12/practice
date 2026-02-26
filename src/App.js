@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-
+import Display from "./Display";
 const App = () => {
-  const [count, setCount] = useState(0);
   return (
     <div>
-      <h3>count is : {count}</h3>
-      <button onClick={() => setCount(count + 1)}>click</button>
+      <Display count={60} name="sruthi" />
     </div>
   );
 };

@@ -1,11 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class Display extends Component {
-  render(props) {
-    return (
-      <div>
-        <h1>{this.props.name}</h1>
-      </div>
-    );
-  }
-}
+const Display = (props) => {
+  return (
+    <div>
+      <h3>{props.count}</h3>
+      <h3>{props.name}</h3>
+    </div>
+  );
+};
+
+export default Display;
