@@ -1,10 +1,16 @@
 import React from "react";
-import Controlled from "./Controlled";
 
 const App = () => {
+  const inputRef = React.useRef("");
+  const submitHandler = (e) => e.preventDefault();
+
+  alert(inputRef.current.value);
   return (
     <div>
-      <Controlled />
+      <form onSubmit={submitHandler}>
+        <input type="text" ref={inputRef} />
+        <input type="submit" value="submit" />
+      </form>
     </div>
   );
 };
