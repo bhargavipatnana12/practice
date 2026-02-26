@@ -1,12 +1,13 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-export default class App extends Component {
-  state = { name: "sruthi" };
-  render() {
-    return (
-      <div>
-        <h1>{this.state.name}</h1>
-      </div>
-    );
-  }
-}
+const App = () => {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <h3>count is : {count}</h3>
+      <button onClick={() => setCount(count + 1)}>click</button>
+    </div>
+  );
+};
+
+export default App;
