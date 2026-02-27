@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
-  const [auth, setAuth] = useState(false);
-  if (auth) {
-    return <Navigate to="/dashboard" />;
-  }
+  let navigate = useNavigate();
   return (
     <div>
-      <h1>WELCOME TO HOME PAGE</h1>
-      <button onClick={() => setAuth(true)}>Login</button>
+      <center>
+        <h4>Hello World</h4>
+        <button onClick={() => navigate("/Dashboard")}>Login</button>
+      </center>
     </div>
   );
 };
