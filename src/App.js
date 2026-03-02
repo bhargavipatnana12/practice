@@ -1,15 +1,14 @@
 import React from "react";
-import ComponentC from "./ComponentC";
+import { connect } from "react-redux";
+import Inc from "./Inc";
 
-export const UserContext = React.createContext();
-const App = () => {
+const App = ({ count }) => {
   return (
     <div>
       <center>
-        <UserContext.Provider value={"Teluguskillhub"}>
-          {" "}
-          <ComponentC />
-        </UserContext.Provider>
+        {" "}
+        <h1>Count from App component : {count}</h1>
+        <Inc />
       </center>
     </div>
   );
